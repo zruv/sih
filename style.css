@@ -1,43 +1,128 @@
 /* Add some basic styling to our website */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  /* Set font family to Arial */
+  font-family: Arial, sans-serif;
+  /* Set margin and padding to 0 */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  /* Remove bullet points from list */
+  list-style: none;
+  /* Set margin and padding to 0 */
+  margin: 0;
+  padding: 0;
+  /* Display list items horizontally */
+  display: flex;
+  /* Justify content to space between items */
+  justify-content: space-between;
+}
+
+nav li {
+  /* Set margin right to 20px */
+  margin-right: 20px;
+}
+
+nav a {
+  /* Set text color to #333 */
+  color: #333;
+  /* Remove text decoration */
+  text-decoration: none;
+}
+
+nav a:hover {
+  /* Set text color to #666 on hover */
+  color: #666;
+}
+
+header {
+  /* Set background color to #f0f0f0 */
+  background-color: #f0f0f0;
+  /* Set padding to 20px */
+  padding: 20px;
+  /* Set text align to center */
+  text-align: center;
+}
+
+header h1 {
+  /* Set font size to 36px */
+  font-size: 36px;
+  /* Set margin bottom to 10px */
+  margin-bottom: 10px;
+}
+
+header p {
+  /* Set font size to 18px */
+  font-size: 18px;
+  /* Set color to #666 */
+  color: #666;
+}
+
+section {
+  /* Set background color to #fff */
+  background-color: #fff;
+  /* Set padding to 20px */
+  padding: 20px;
+  /* Set border radius to 10px */
+  border-radius: 10px;
+  /* Set box shadow to create a 3D effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+  /* Set width to 100% */
+  width: 100%;
+  /* Set height to auto */
+  height: auto;
+  /* Set margin bottom to 10px */
+  margin-bottom: 10px;
+}
+
+section p {
+  /* Set font size to 18px */
+  font-size: 18px;
+  /* Set color to #666 */
+  color: #666;
+}
+
+/* Add animation to header and section */
+header, section {
+  /* Set animation duration to 1s */
+  animation-duration: 1s;
+  /* Set animation delay to 0.5s */
+  animation-delay: 0.5s;
+}
+
+header {
+  /* Set animation name to fadeIn */
+  animation-name: fadeIn;
+}
+
+section {
+  /* Set animation name to slideIn */
+  animation-name: slideIn;
+}
+
+/* Define animation keyframes */
+@keyframes fadeIn {
+  0% {
+    /* Set opacity to 0 */
+    opacity: 0;
   }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+  100% {
+    /* Set opacity to 1 */
+    opacity: 1;
   }
-  
-  nav li {
-    margin-right: 20px;
+}
+
+@keyframes slideIn {
+  0% {
+    /* Set transform to translateX(-100%) */
+    transform: translateX(-100%);
   }
-  
-  nav a {
-    color: #333;
-    text-decoration: none;
+  100% {
+    /* Set transform to translateX(0) */
+    transform: translateX(0);
   }
-  
-  nav a:hover {
-    color: #666;
-  }
-  
-  header {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 18px;
-    color: #666;
-  }
+}
