@@ -1,0 +1,168 @@
+/* Basic styling to remove default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+please do changes in code and make it more animated, minimalistand mordern 
+/* Styling for the body to center content and set a background color */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0; /* Soft light background */
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Navigation bar styling */
+nav {
+  background: linear-gradient(90deg, #333, #555); /* Gradient navbar */
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+/* Unordered list styling within the nav */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Spacing between links */
+}
+
+/* List item styling */
+nav ul li {
+  margin: 0;
+}
+
+/* Styling for the navigation links */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent background */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for the navigation buttons */
+nav ul li a:hover {
+  background-color: #ff671f; /* Change background on hover */
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 103, 31, 0.8); /* Glow effect */
+  transform: scale(1.1); /* Slight grow on hover */
+}
+
+/* Main heading styling */
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+  border-radius: 12px;
+  padding-top: 100px;
+}
+
+.thought{
+  font-size: 40px;
+  margin-top: 30px;
+  padding: 10px;
+  color: gray;
+  background-color: linear-gradient(to right,  #ff5f6d, #ffc371);
+  border-radius: 12px;
+  background: radial-gradient(circle,  #f0f4b5, #ffc371);
+}
+
+.thought:hover{
+  cursor: text;
+  transition: 0.5s;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: #333;
+  padding-bottom: 20px;
+  font-size: 42px;
+}
+
+/* Styling for the h1 heading */
+header h1 {
+  font-size: 80px;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px 40px;
+  animation: fadeIn 2s ease-in-out forwards, float 4s ease-in-out infinite;
+}
+
+
+/* Keyframes for fading in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Initial position (slightly above) */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position (normal) */
+  }
+}
+
+/* Keyframes for floating effect */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Move upward slightly */
+  }
+}
+
+/* Add scale animation on hover */
+header h1:hover {
+  animation: scaleUp 1s forwards;
+}
+
+/* Keyframes for scale up animation */
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 12vw; /* Make heading size responsive */
+  }
+}
+
+header h2{
+  padding-top: 100px;
+}
+
+/* Add a subtle scroll-down indicator */
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: white;
+  animation: blink 1.5s infinite;
+}
+
+/* Blinking animation for scroll indicator */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
